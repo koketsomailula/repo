@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Vending Machin</title>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Vending Machine</h1>
+
+    <form style="margin-bottom: 10px;">
+        <span>50 Cents</span> <input style="margin-bottom: 6px;" type="text" name="fiftycents" id="fiftycents" placeholder="0" value="0" oninput="tally()" /><br>
+        <span>1 Rands</span> <input style="margin-bottom: 6px;" type="text" name="onerands" id="onerands" placeholder="0" value="0" oninput="tally()" /><br>
+        <span>2 Rands</span> <input style="margin-bottom: 6px;" type="text" name="tworands" id="tworands" placeholder="0" value="0" oninput="tally()"  /><br>
+        <span>5 Rands</span> <input type="text" name="fiverands" id="fiverands" placeholder="0" value="0" oninput="tally()"  />
+    </form>
+
+    <h2>Soft Drinks @ R12,50</h2>
+
+    <button value="Coke" id="coke" onclick="dispenseDrink(0)">Coca Cola</button>
+    <button value="Orange" id="orange" onclick="dispenseDrink(1)">Fanta Orange</button>
+    <button value="Grape" id="grape" onclick="dispenseDrink(2)">Fanta Grape</button>
+    <button value="Water" id="water" onclick="dispenseDrink(3)">Water</button>
+    <br><br>
+    <button value="Cancel" id="cancel" onclick="cancel()">Cancel</button>
+
+    <h3 id="message">Insert money first and select Drink.</h3>
+
+    <h3>Total Entered: R<span id="paid">0.00</span> </h3>
+
+    <script src="vending.js"></script>
+
+    </div>
+
+</body>
+</html>
